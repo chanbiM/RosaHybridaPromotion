@@ -58,18 +58,18 @@ html, body {
 
 .flower {
     top: 100%;
-    animation: flowerMove 1s;
+    animation: flowerMove 2s;
     animation-fill-mode: forwards;
 }
 .petal {
     top: 100%;
-    animation: objMove 1s;
+    animation: objMove 2s;
     animation-fill-mode: forwards;
 }
 .curtain {
     animation: objMove 2s;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 1s;
 }
 .logo {
     display: block;
