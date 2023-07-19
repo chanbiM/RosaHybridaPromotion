@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +11,103 @@
     <link rel="stylesheet" href="css/mainPageStyle.css">
     <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script defer src="js/mainScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
             <div class="logo">
                 <a href="mainPage.html"><img src="images/common/image_logo.png" alt="logo"></a>
             </div>
-            <div class="hamMenu">
-                <a href="#" class="menu-button [ js-menu-button ]">
-                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                      <g fill="none" fill-rule="evenodd" stroke="#979797">
-                        <path d="M13,26.5 L88,26.5"/>
-                        <path d="M13,50.5 L88,50.5"/>
-                        <path d="M13,50.5 L88,50.5"/>
-                        <path d="M13,74.5 L88,74.5"/>
-                      </g>
-                    </svg>
-                </a>
+
+            <div class="menu">
+                <div class="playbar">
+                    <a href="https://crepe.cm/@2heeheeh2/16654" target="_blank">낙원 - 슘</a>
+                    <audio class="mainAudio" src="images/common/paradise_bgm.mp3" controls="controls" loop autoplay
+                        onloadstart="this.volume=0.03">
+                    </audio>
+                </div>
+
+                <div class="hamMenu">
+                    <a href="#" class="menu-button [ js-menu-button ]">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <g fill="none" fill-rule="evenodd" stroke="#979797">
+                                <path d="M13,26.5 L88,26.5" />
+                                <path d="M13,50.5 L88,50.5" />
+                                <path d="M13,50.5 L88,50.5" />
+                                <path d="M13,74.5 L88,74.5" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
             </div>
+
         </header>
+
+        <div class="mainSec1">
+            <video autoplay controls loop muted poster="images/main/videoPoster.png" preload="auto"
+                class="backgroundVideo">
+                <source src="images/main/mainVideo.mp4" type="video/mp4">
+            </video>
+            <div class="blank"></div>
+            <div class="slide">
+
+            </div>
+        </div>
+
+        <div class="mainSec2">
+            <div class="mainSec2__background">
+                <img src="images/main/main_2_flower.png" alt="꽃">
+            </div>
+            <div id="mainSec2__section" class="effect">
+                <div class="mainSec2__title">
+                    <h1>Rosa Hybrida</h1>
+                </div>
+                <div class="mainSec2__content">
+                    <p>
+                        <b>장미꽃의 낙원, 일명 블라섬.</b><br>
+                        블라섬은 새로운 관광지로 떠오른 곳입니다.<br>
+                        이벤트 당첨자, 가족과의 여행 등 어떠한 사유로든 이곳으로 여행을 올 수 있으며,
+                        저희 블라섬은 언제나 여러분을 환영합니다.
+                        <br><br>
+                        <span>일상 후 극시리 | 질병 아포칼립스 | 신청서 합발제 | 흑막제 | 챕터제 | 07^</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mainSec2__text">
+                <img src="images/main/mainSec2_text.png" alt="Rosa Hybrida">
+            </div>
+        </div>
+
+
+        <div class="mainSec3">
+            <div class="mainSec3__image">
+                <img src="images/main/mainSec3.png" alt="정원의 모습">
+            </div>
+            <div class="mainSec3__content-section">
+                <div class="mainSec3__title">
+                    <h1>Blossom</h1>
+                </div>
+
+                <div class="mainSec3__content">
+                    <h1>장미의 멋과 향기를 느낄 수 있는 곳, <b>블라섬</b></h1>
+                <p>
+                    블라섬은 배를 타고 이동하면 나오는 섬으로, 현재 새롭고 편안한 관광지로 자리매김 하였습니다. <br>
+                    또한, 장미꽃이 매우 많아 <b>장미꽃의 낙원</b>이라 불리며, 별명과 걸맞게 장미꽃들이 당신을 환영할 예정입니다.<br>
+                    마지막으로 블라섬은 숙박 및 편의 시설이 잘 갖춰져 있어 발길이 끊이지 않는 섬입니다.
+                </p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-
-    <div class="slide">
-
-    </div>
-
 
 </body>
+
 </html>

@@ -1,36 +1,99 @@
 @charset "UTF-8";
 
+video::-webkit-media-controls-fullscreen-button {
+	display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+	display: none !important;
+}
+
+video::-webkit-media-controls-timeline {
+	display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display {
+	display: none !important;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+	display: none !important;
+}
+
+video::-webkit-media-controls-mute-button {
+	display: none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+	display: none !important;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+	display: none !important;
+}
+
+video::-webkit-media-controls- {
+	display: none !important;
+}
+
+* {
+	text-decoration: none;
+	color: #fff;
+}
+
 .wrapper {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #000;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
 }
+
 header {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    height: 150px;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 999;
+	backdrop-filter: blur(5px);
 }
 
-.logo > a > img {
-    width: 22vw;
-    height: 18vh;
+header:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: all 1s;
 }
 
-.hamMenu {
-	
-	/* align-items: center;
-	justify-content: center;
-	min-height: 100vh; */
+.menu {
+	display: flex;
+}
+
+#play-icon {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+
+.logo>a>img {
+	min-width: 15vw;
+	max-width: 40vw;
+	max-height: 12vh;
 }
 
 
 .menu-icon {
+	margin-top: 15px;
 	position: relative;
-	width: 70%;
-	height: 70%;
+	min-width: 10px;
+	max-width: 50px;
+	height: 65%;
 	display: inline-block;
+	margin-right: 20px;
 }
 
 .menu-icon path {
@@ -46,7 +109,7 @@ header {
 .menu-button:hover path,
 .menu-button:focus path,
 .menu-button:active path {
-    stroke: #fff;
+	stroke: #fff;
 }
 
 .menu-icon.is-active path:nth-child(1) {
@@ -58,9 +121,193 @@ header {
 }
 
 .menu-icon.is-active path:nth-child(2) {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .menu-icon.is-active path:nth-child(3) {
 	transform: rotate(-45deg);
+}
+
+.mainSec1,
+.mainSec2,
+.mainSec3 {
+	width: 100vw;
+	height: 100vh;
+}
+
+.blank {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	top: 0;
+	/* background-color: rgba(0, 255, 255, 0.1); */
+}
+
+.backgroundVideo {
+	width: 100vw;
+	height: 100vh;
+	object-fit: fill;
+}
+
+.playbar {
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 10px;
+	max-width: 300px;
+	height: 60px;
+	background-color: rgba(190, 119, 168, 0.3);
+	color: #fff;
+	border-radius: 14px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+.playbar a {
+	font-size: 18px;
+}
+
+audio::-webkit-media-controls-enclosure {
+	background-color: rgba(0, 0, 0, 0.0);
+	color: #fff;
+
+}
+
+audio::-webkit-media-controls-panel {
+	padding: 0;
+	margin: 0;
+	background-color: rgba(180, 152, 171, 0.0);
+}
+
+audio::-webkit-media-controls-play-button {
+	-webkit-appearance: media-play-button;
+	color: #fff;
+}
+
+audio::-webkit-media-controls-mute-button {
+	-webkit-appearance: media-mute-button;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+	color: #ffffff;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+	padding: 0px 0;
+	background-color: rgb(255, 132, 199);
+	border-radius: 13px;
+	color: rgb(255, 255, 255);
+	min-width: 0;
+	margin: 8px;
+}
+
+.mainSec2__background>img {
+	width: 100vw;
+	height: 100vh;
+}
+
+.mainSec2,
+.mainSec3 {
+	position: relative;
+	background-color: black;
+	overflow: hidden;
+}
+
+#mainSec2__section {
+	position: absolute;
+	z-index: 101;
+	width: 100vw;
+	bottom: 0;
+	margin: 30px;
+	line-height: 1.8;
+	opacity: 0;
+	/* animation: fadeText 4s linear;
+	animation-fill-mode: forwards;  */
+}
+
+.mainSec2__title {
+	font-size: 65px;
+	font-family: 'Abril Fatface', cursive;
+}
+
+.mainSec2__title>h1 {
+	color: rgba(0, 0, 0, 0.0);
+	-webkit-text-stroke: 0.5px #fff;
+}
+
+.mainSec2__content {
+	font-family: 'Nanum Myeongjo', serif;
+	text-shadow: rgb(222, 45, 196) 1px 0 10px;
+}
+
+.mainSec2__content b {
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.mainSec3__content b {
+	font-weight: 800;
+	color: rgb(255, 64, 214);
+}
+
+.mainSec2__content span {
+	color: #969696;
+}
+
+.mainSec2__text {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.mainSec3__image {
+	width: 100%;
+	height: 65%;
+}
+
+.mainSec3__image>img {
+	width: 100%;
+	height: 100%;
+}
+
+.mainSec3__content-section {
+	position: relative;
+	line-height: 1.8;
+	padding: 30px;
+}
+.mainSec3__content {
+	opacity: 0;
+}
+.mainSec3__content p {
+	font-family: 'Nanum Myeongjo', serif;
+	text-shadow: rgb(222, 45, 196) 1px 0 10px;
+}
+.mainSec3__content > h1 {
+	font-weight: 700;
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 25px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-shadow: rgb(222, 45, 196) 1px 0 10px;
+}
+
+.mainSec3__title {
+	position: absolute;
+	top: -50%;
+}
+.mainSec3__title > h1 {
+	font-size: 90px;
+	font-family: 'Abril Fatface', cursive;
+	color: #000;
 }
