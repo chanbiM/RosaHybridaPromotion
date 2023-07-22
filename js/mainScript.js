@@ -23,6 +23,7 @@ window.onscroll = () => {
 	var scrollRate = 스크롤이넘어간정도 / divHeight * 100;
 	const childDiv1 = document.querySelector('#mainSec2__section');
 	const childDiv2 = document.querySelector('.mainSec3__content');
+	const childDiv3 = document.querySelector('.mainSec4__content')
 
 	
 	console.log(스크롤이넘어간정도);
@@ -46,8 +47,19 @@ window.onscroll = () => {
 				opacity: "0",
 			}, 10
 		);
-	} else {
+	} else if (스크롤이넘어간정도 < 2000) {
 		$(childDiv2).stop().animate(
+			{
+				opacity: "1",
+			}, 2000
+		);
+		$(childDiv3).stop().animate(
+			{
+				opacity: "0",
+			}, 10
+		);
+	}else if (스크롤이넘어간정도 < 2400) {
+		$(childDiv3).stop().animate(
 			{
 				opacity: "1",
 			}, 2000
