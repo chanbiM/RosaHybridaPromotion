@@ -472,3 +472,23 @@ video::-webkit-media-controls-timeline {
 	display: none;
 	position: fixed;
 }
+
+.menuBox {
+	font-size: 4vw;
+	font-family: 'Abril Fatface', cursive;
+}
+.menuBox a {
+	color: rgba(0, 0, 0, 0.0);
+	-webkit-text-stroke: 0.5px #fff;
+	line-height: 1.8;
+}
+.menuBox ul {
+	position: absolute;
+	padding: 60px;
+	bottom: 5%;
+}
+.menuBox img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
