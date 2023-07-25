@@ -67,3 +67,72 @@ window.onscroll = () => {
 	}
 
 }
+
+var slide = $(".slide>a");
+var sno = 0;
+var eno = slide.length - 1;
+
+var num = 0;
+var isNegativeNum = false;
+let text = ['<h1>현재 홍보중<br>(이미지를 클릭하면 프공방으로 이동합니다)</h1>', '<h1>응애</h1>', '<h1>오옹ㅋ</h1>']
+
+var slideText = $("slideText>.textbox");
+
+//3초간 실행
+var timer = setInterval("autoSlide()",3000);
+
+function autoSlide(){
+	$(slide[sno]).stop().animate({
+		rotate: num+"deg",
+		"margin-left": "-200vw"
+	}, 1000,
+	function(){
+        //원래 위치로 (왼쪽), 대기조
+        $(this).css({
+			rotate: "0deg",
+			"margin-left": "100vw"
+		})
+    });
+
+	sno++;
+	isNegativeNum = !isNegativeNum;
+	if (isNegativeNum) {
+		num= Math.random() *5
+	} else {
+		num= -Math.random() *5
+	}
+	
+	
+    if(sno > eno){
+        sno = 0;
+    }
+
+	$(slide[sno]).stop().animate({
+		rotate: num+"deg",
+		"margin-left": "-30vw"
+    }, 1000)
+	const element = document.getElementById('textbox');
+  	element.innerHTML = text[sno];
+}
+
+$(".slide>a").hover(
+	function () {
+		clearInterval(timer);
+	},
+	function () {
+		timer = setInterval("autoSlide()",3000);
+	}
+);
+
+var isClick = 0;
+$(".hamMenu").click(
+	function () {
+		if (isClick==0) {
+			$(".menuBox").stop().fadeIn('slow');
+			isClick = 1;
+		} else {
+			$(".menuBox").stop().fadeOut('fast');
+			isClick = 0;
+		}
+	}
+);
