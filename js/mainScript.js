@@ -74,7 +74,7 @@ var eno = slide.length - 1;
 
 var num = 0;
 var isNegativeNum = false;
-let text = ['<h1>현재 홍보중<br>(이미지를 클릭하면 프공방으로 이동합니다)</h1>', '<h1>응애</h1>', '<h1>오옹ㅋ</h1>']
+let text = ['<h1>현재 홍보중<br>(이미지를 클릭하면 프공방으로 이동합니다)</h1>', '<h1>프로필 제출 링크로 이동</h1>', '<h1>많은 홍보 부탁드립니다.</h1>']
 
 var slideText = $("slideText>.textbox");
 
